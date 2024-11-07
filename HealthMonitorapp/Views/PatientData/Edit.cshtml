@@ -1,0 +1,34 @@
+﻿@model HealthMonitorapp.Models.PatientData
+
+@{
+    ViewData["Title"] = "Edit Patient Data";
+}
+
+<h1>Edit Patient Data</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label>Patient ID:</label>
+        <input type="text" asp-for="PatientId" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Timestamp:</label>
+        <input type="datetime-local" asp-for="Timestamp" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Heart Rate:</label>
+        <input type="number" asp-for="HeartRate" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Oxygen Level:</label>
+        <input type="number" step="0.1" asp-for="OxygenLevel" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Alert:</label>
+        <input type="checkbox" asp-for="Alert" class="form-check-input" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
+
+

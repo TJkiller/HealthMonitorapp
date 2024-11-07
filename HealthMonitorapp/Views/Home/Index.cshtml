@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "HealthMonitor - Home";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1>Welcome to HealthMonitor App</h1>
+            <p>Your personal healthcare monitoring platform</p>
+            <hr />
+            <h3>Health Insights</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Risk Assessment</h4>
+                            <p class="card-text">View and assess health risks for patients based on their health data.</p>
+                            <a href="@Url.Action("Index", "RiskAssessment")" class="btn btn-primary">Go to Risk Assessment</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Patient Data</h4>
+                            <p class="card-text">Manage and view patient data including heart rate, oxygen levels, and alerts.</p>
+                            <a href="@Url.Action("Index", "PatientData")" class="btn btn-primary">Go to Patient Data</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Health Trends</h4>
+                            <p class="card-text">Monitor and analyze trends in patient health over time.</p>
+                            <a href="@Url.Action("Create", "PatientData")" class="btn btn-primary">View Trends</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <footer>
+                <p>&copy; 2024 HealthMonitor App - All rights reserved</p>
+            </footer>
+        </div>
+    </div>
+</div>

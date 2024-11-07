@@ -1,0 +1,35 @@
+﻿@model HealthMonitorapp.Models.PatientData
+
+@{
+    ViewData["Title"] = "Delete Patient Data";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h4>Are you sure you want to delete this item?</h4>
+<hr />
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.PatientId)</dt>
+        <dd>@Html.DisplayFor(model => model.PatientId)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Timestamp)</dt>
+        <dd>@Html.DisplayFor(model => model.Timestamp)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.HeartRate)</dt>
+        <dd>@Html.DisplayFor(model => model.HeartRate)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.OxygenLevel)</dt>
+        <dd>@Html.DisplayFor(model => model.OxygenLevel)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Alert)</dt>
+        <dd>@Html.DisplayFor(model => model.Alert)</dd>
+    </dl>
+</div>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancel</a>
+</form>
